@@ -2,18 +2,25 @@ extends Node2D
 
 var MapSizeX = 32
 var MapSizeY = 32
-var Map = [MapSizeX][MapSizeY]
+var Map = []
 var Generating = true
 var Nodes = []
 
 func _ready() -> void:
+	for x in range(MapSizeX):
+		var row = []
+		for y in range(MapSizeY):
+			row.append(0)
+		Map.append(row)
 	randomize()
-	Nodes[0] = Vector3(16, 16, 1)
-	Nodes[1] = Vector3(8, 8, 2)
-	Nodes[2] = Vector3(24, 24, 3)
-	Nodes[3] = Vector3(18, 9, 1)
-	Nodes[4] = Vector3(9, 18, 4)
+	Nodes.append(Vector3(16, 16, 1))
+	Nodes.append(Vector3(8, 8, 2))
+	Nodes.append(Vector3(24, 24, 3))
+	Nodes.append(Vector3(18, 9, 1))
+	Nodes.append(Vector3(9, 18, 4))
 	while(Generating):
+		if(Nodes.size() == 0):
+			Generating = false
 		for i in range(Nodes.size()):
 			var Direction = Nodes[i].z
 			var AddX = 0
@@ -32,8 +39,10 @@ func _ready() -> void:
 				AddY = -1
 			if(Nodes[i].x + AddX > MapSizeX || Nodes[i].x + AddX < 0):
 				Nodes.remove_at(i)
+				break
 			if(Nodes[i].y + AddY > MapSizeY || Nodes[i].y + AddY < 0):
 				Nodes.remove_at(i)
+				break
 			Map[Nodes[i].x][Nodes[i].y] = 1
 			Nodes[i].x +=AddX
 			Nodes[i].y +=AddY
