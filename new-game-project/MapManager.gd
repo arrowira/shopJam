@@ -1,5 +1,7 @@
 extends Node2D
 
+var RoadObj = preload("res://RoadObject.tscn")
+
 var MapSizeX = 32
 var MapSizeY = 32
 var Map = []
@@ -46,3 +48,14 @@ func _ready() -> void:
 			Map[Nodes[i].x][Nodes[i].y] = 1
 			Nodes[i].x +=AddX
 			Nodes[i].y +=AddY
+	var XPos = 0
+	var YPos = 0
+	for i in range(Map.size()):
+		for i1 in range(Map[i].size()):
+			if(Map[i][i1] == 1):
+				var REM = RoadObj.instantiate()
+				REM.position = Vector2(XPos, YPos)
+				add_child(REM)
+			XPos += 64
+		YPos += 64
+		XPos = 0
