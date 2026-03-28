@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckudr8chj1kgo"]
 
-[ext_resource type="Texture2D" uid="uid://dg780s33tena6" path="res://sprites/Screenshot 2026-03-27 231034.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dg780s33tena6" path="res://sprites/pig/Screenshot 2026-03-27 231034.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://scripts/player.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
