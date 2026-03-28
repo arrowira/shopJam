@@ -21,6 +21,7 @@ shader_parameter/focusPoint = Vector2(0.5, 0.5)
 [node name="main" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
 material = SubResource("ShaderMaterial_tbgi4")
 offset_left = -5255.0
 offset_top = -3317.0
@@ -43,3 +44,9 @@ position = Vector2(302, -7)
 
 [node name="shop" parent="." instance=ExtResource("5_tbgi4")]
 position = Vector2(341, -369)
+
+[node name="edibleSmall3" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(426, -280)
+
+[node name="edibleSmall4" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(201, -367)
