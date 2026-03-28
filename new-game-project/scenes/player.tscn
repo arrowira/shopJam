@@ -10,82 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://djwrg5pvi8anp" path="res://sprites/pig/fat_pig_body.png" id="8_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://c2mepje8j2isr" path="res://sprites/pig/fat_pig_head.png" id="9_oprun"]
 
-[sub_resource type="Animation" id="Animation_a8ls1"]
-resource_name = "pig walk"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.03333333, 0.46666667, 0.72),
-"transitions": PackedFloat32Array(1, 1, 0.45062527),
-"update": 0,
-"values": [Vector2(41.999996, -19), Vector2(45, -8.000001), Vector2(33, -15)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(-0.06666672, 0, 0.48),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-4.0000153, 16.000015), Vector2(-4.0000153, 16.000015), Vector2(-5, 10.000001)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.53333336, 0.83),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(13, 62), Vector2(18, 54.000004), Vector2(21, 63)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-22, 65), Vector2(-32.999996, 62), Vector2(-28.000002, 58)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.51, 0.76, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(24, 59), Vector2(33, 52), Vector2(33, 60)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite2D6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0.7),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-23, 60)]
-}
-
 [sub_resource type="Animation" id="Animation_qfm1y"]
 resource_name = "Pig walk"
 loop_mode = 1
@@ -174,10 +98,13 @@ tracks/6/keys = {
 "values": [Vector2(-68, -13.000003), Vector2(-64, -22), Vector2(-67.00001, -11.000002), Vector2(-64.00001, -22)]
 }
 
+[sub_resource type="Animation" id="Animation_ur7pv"]
+resource_name = "Pig Idle"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fulsm"]
 _data = {
-&"Pig walk": SubResource("Animation_qfm1y"),
-&"pig walk": SubResource("Animation_a8ls1")
+&"Pig Idle": SubResource("Animation_ur7pv"),
+&"Pig walk": SubResource("Animation_qfm1y")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
