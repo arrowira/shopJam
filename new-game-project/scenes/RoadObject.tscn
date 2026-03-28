@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwjiuyoxreuon"]
 
-[ext_resource type="Texture2D" uid="uid://ckceotbvbd54i" path="res://rem.png" id="1_lflk3"]
+[ext_resource type="Texture2D" uid="uid://ckceotbvbd54i" path="res://sprites/rem.png" id="1_lflk3"]
 
 [node name="RoadObject" type="Node2D"]
 

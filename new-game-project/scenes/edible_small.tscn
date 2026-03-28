@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bkuwasplla63r"]
 
-[ext_resource type="Texture2D" uid="uid://jwq2i0tikjfm" path="res://Screenshot 2026-03-27 232336.png" id="1_5y4q8"]
-[ext_resource type="Script" uid="uid://b07wcde4avcxl" path="res://edible.gd" id="1_r1t2f"]
+[ext_resource type="Texture2D" uid="uid://jwq2i0tikjfm" path="res://sprites/Screenshot 2026-03-27 232336.png" id="1_5y4q8"]
+[ext_resource type="Script" uid="uid://b07wcde4avcxl" path="res://scripts/edible.gd" id="1_r1t2f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1t2f"]
 size = Vector2(98, 71)
