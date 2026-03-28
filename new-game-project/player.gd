@@ -12,3 +12,7 @@ func _physics_process(delta: float) -> void:
 	velocity *= 0.9
 	
 	move_and_slide()
+
+
+func _on_eat_box_area_entered(area: Area2D) -> void:
+	print(area)
