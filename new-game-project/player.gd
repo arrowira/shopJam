@@ -13,11 +13,11 @@ func _physics_process(delta: float) -> void:
 	velocity += input * speed
 	velocity *= 0.9
 	
+	if Input.is_action_pressed("eat"):
+		for area in $eatBox.get_overlapping_areas():
+			if area.is_in_group("edible"):
+				size+=area.getValue()
+				area.queue_free()
+				print(size)
+	
 	move_and_slide()
-
-
-func _on_eat_box_area_entered(area: Area2D) -> void:
-	if area.is_in_group("edible"):
-		size += area.getValue()
-		print(size)
-		area.queue_free()
