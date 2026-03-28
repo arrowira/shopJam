@@ -1,6 +1,6 @@
 extends Node2D
 
-var RoadObj = preload("res://RoadObject.tscn")
+var RoadObj = preload("res://scenes/RoadObject.tscn")
 
 var MapSizeX = 32
 var MapSizeY = 32
