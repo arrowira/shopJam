@@ -50,7 +50,7 @@ func _ready() -> void:
 			if(Nodes[i].y + AddY > MapSizeY || Nodes[i].y + AddY < 0):
 				Nodes.remove_at(i)
 				break
-			Map[Nodes[i].x][Nodes[i].y] = 1
+			Map[Nodes[i].x-1][Nodes[i].y-1] = 1
 			Nodes[i].x +=AddX
 			Nodes[i].y +=AddY
 	var XPos = 0
