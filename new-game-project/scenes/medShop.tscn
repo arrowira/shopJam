@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://lnwbof5s0xcp"]
+[gd_scene load_steps=15 format=3 uid="uid://lnwbof5s0xcp"]
 
 [ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_bd745"]
 [ext_resource type="Texture2D" uid="uid://cgo8f6uatovpx" path="res://sprites/medShop-1.png.png" id="2_eoffu"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="2_t00tp"]
 [ext_resource type="Texture2D" uid="uid://c3451w0csf4ir" path="res://sprites/medShop-2.png.png" id="3_t00tp"]
+[ext_resource type="Texture2D" uid="uid://dvgxf0bpnuvc3" path="res://sprites/openSign.png" id="5_d8bep"]
+[ext_resource type="Script" uid="uid://ciord86o3iys5" path="res://scripts/openSign.gd" id="6_n4dlw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
 size = Vector2(902, 442)
@@ -145,6 +147,20 @@ offset_top = 2.0
 offset_right = 965.00006
 offset_bottom = 827.0
 texture = ExtResource("3_t00tp")
+
+[node name="OpenSign2" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(206.99994, 452.00003)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_d8bep")
+script = ExtResource("6_n4dlw")
+
+[node name="OpenSign3" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(771.9999, 452)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_d8bep")
+script = ExtResource("6_n4dlw")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(483.00006, 412)

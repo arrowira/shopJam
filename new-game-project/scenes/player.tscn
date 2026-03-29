@@ -37,7 +37,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/path = NodePath("torso:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -125,7 +125,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/path = NodePath("torso:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -212,7 +212,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/path = NodePath("torso:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -341,7 +341,7 @@ position = Vector2(18.99932, 60.99864)
 scale = Vector2(0.0979021, 0.083072096)
 texture = ExtResource("7_jej6c")
 
-[node name="Sprite2D2" type="Sprite2D" parent="pigparts"]
+[node name="torso" type="Sprite2D" parent="pigparts"]
 position = Vector2(-4.888758, 11.556219)
 scale = Vector2(0.06, 0.065)
 texture = ExtResource("8_f1ej7")

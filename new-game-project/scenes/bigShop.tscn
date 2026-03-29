@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cj7clvjr2xhlv"]
+[gd_scene load_steps=15 format=3 uid="uid://cj7clvjr2xhlv"]
 
 [ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_d4q83"]
 [ext_resource type="Texture2D" uid="uid://c2lgdrh1bo6aj" path="res://sprites/bigShop-1.png.png" id="2_d4q83"]
 [ext_resource type="Texture2D" uid="uid://cq4b3ksopqlrd" path="res://sprites/bigShop-2.png.png" id="3_5icma"]
+[ext_resource type="Texture2D" uid="uid://dvgxf0bpnuvc3" path="res://sprites/openSign.png" id="4_4uyd5"]
+[ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="4_5icma"]
+[ext_resource type="Script" uid="uid://ciord86o3iys5" path="res://scripts/openSign.gd" id="5_d1otv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
 size = Vector2(870, 670)
@@ -85,6 +88,25 @@ offset_right = 965.00006
 offset_bottom = 1001.0
 texture = ExtResource("3_5icma")
 
+[node name="OpenSign2" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(490.9999, 770)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_4uyd5")
+
+[node name="OpenSign" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(216.99994, 919)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_4uyd5")
+
+[node name="OpenSign3" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(787.9999, 922)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_4uyd5")
+script = ExtResource("5_d1otv")
+
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(483.00006, 412)
 
@@ -118,6 +140,87 @@ shape = SubResource("RectangleShape2D_8vn8n")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(759, 837)
 shape = SubResource("RectangleShape2D_8vn8n")
+
+[node name="edibleSmall" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(104, 778)
+
+[node name="edibleSmall2" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(103, 674)
+
+[node name="edibleSmall3" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(103, 569)
+
+[node name="edibleSmall4" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(99, 483)
+
+[node name="edibleSmall5" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(100, 386)
+
+[node name="edibleSmall6" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(100, 301)
+
+[node name="edibleSmall7" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(99, 202)
+
+[node name="edibleSmall8" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(852, 778)
+
+[node name="edibleSmall9" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(851, 674)
+
+[node name="edibleSmall10" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(851, 569)
+
+[node name="edibleSmall11" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(847, 483)
+
+[node name="edibleSmall12" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(848, 386)
+
+[node name="edibleSmall13" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(848, 301)
+
+[node name="edibleSmall14" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(847, 202)
+
+[node name="edibleSmall15" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(479, 366)
+
+[node name="edibleSmall16" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(392, 399)
+
+[node name="edibleSmall17" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(362, 466)
+
+[node name="edibleSmall18" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(407, 530)
+
+[node name="edibleSmall19" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(488, 561)
+
+[node name="edibleSmall20" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(572, 526)
+
+[node name="edibleSmall21" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(618, 462)
+
+[node name="edibleSmall22" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(562, 399)
+
+[node name="edibleSmall23" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(285, 778)
+
+[node name="edibleSmall24" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(665, 784)
+
+[node name="edibleSmall25" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(284, 185)
+
+[node name="edibleSmall26" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(479, 182)
+
+[node name="edibleSmall27" parent="." instance=ExtResource("4_5icma")]
+position = Vector2(682, 179)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
