@@ -1,12 +1,19 @@
 extends Node2D
 
 var RoadObj = preload("res://scenes/RoadObject.tscn")
+var SmallShopScene = preload("res://scenes/shop.tscn")
+var MeduimShopScene = preload("res://scenes/shop.tscn")
+var LargeShopScene = preload("res://scenes/shop.tscn")
 
 var MapSizeX = 32
 var MapSizeY = 32
 var Map = []
 var Generating = true
 var Nodes = []
+
+var SmallShop = 10
+var MeduimShop = 3
+var LargeShop = 3
 
 func _ready() -> void:
 	for x in range(MapSizeX):
@@ -57,6 +64,36 @@ func _ready() -> void:
 			Map[Nodes[i].x-1][Nodes[i].y-1] = 1
 			Nodes[i].x +=AddX
 			Nodes[i].y +=AddY
+	for i in range(SmallShop):
+		var SG = true
+		var T = 0
+		while(SG == true):
+			#T+=1
+			var Restart = false
+			var RX = randi_range(0, MapSizeX-3)
+			var RY = randi_range(0, MapSizeY-3)
+			if(Map[RX][RY] > 0):
+				continue
+			if(T>=100):
+				var RAM = MeduimShopScene.instantiate()
+				RAM.position = Vector2((RX+1)*320, (RY+1)*320)
+				add_child(RAM)
+				SG = false
+			for i1 in range(3):
+				for i2 in range(3):
+					if(Map[RX+i2][RY+i1] > 1):
+						Restart = true
+			if(Restart == true):
+				continue
+			SG = false
+			#var RAM = MeduimShopScene.instantiate()
+			#RAM.position = Vector2((RX)*320, (RY)*320)
+			#add_child(RAM)
+			var REM = RoadObj.instantiate()
+			REM.position = Vector2((RX+1)*320, (RY+1)*320)
+			REM.scale = Vector2(REM.scale.x*3, REM.scale.y*3)
+			add_child(REM)
+		T = 0
 	var XPos = 0
 	var YPos = 0
 	for i in range(Map.size()):

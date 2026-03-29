@@ -6,6 +6,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
 size = Vector2(934, 553)
 
+[sub_resource type="Animation" id="Animation_032fp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.09086525, 0.08582147, 0.05517838, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_1l46r"]
 resource_name = "shopIn"
 tracks/0/type = "value"
@@ -31,21 +46,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.09086525, 0.08582147, 0.05517838, 1), Color(0.09019608, 0.08627451, 0.05490196, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_032fp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.09086525, 0.08582147, 0.05517838, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_2fc2m"]
@@ -75,19 +75,20 @@ script = ExtResource("1_lx5au")
 
 [node name="ColorRect2" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(-16, -69)
+position = Vector2(467.00006, 343)
 scale = Vector2(1.5858897, 1.8276762)
 texture = ExtResource("2_xfvoa")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 100
-offset_left = -480.0
-offset_top = -410.0
-offset_right = 482.0
-offset_bottom = 172.0
+offset_left = 3.000061
+offset_top = 2.0
+offset_right = 965.00006
+offset_bottom = 584.0
 color = Color(0.09086525, 0.08582147, 0.05517838, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(483.00006, 412)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, -110.5)

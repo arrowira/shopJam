@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Shader" path="res://background.gdshader" id="1_jyhfs"]
+[ext_resource type="Script" uid="uid://cvrqwa6r4hc7a" path="res://scripts/MapManager.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/shop.tscn" id="5_tbgi4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
+shader = ExtResource("1_jyhfs")
+shader_parameter/innerColor = Color(0.29140478, 0.20404354, 0.097637616, 1)
+shader_parameter/outerColor = Color(0.36517084, 0.25176942, 0.16937906, 1)
+shader_parameter/scale = 20.0
+shader_parameter/timeMod = 0.0
+shader_parameter/pixelation = 0.01
+shader_parameter/bold = 5.0
+shader_parameter/sharp = 3.0
+shader_parameter/moveSpeed = 1.0
+shader_parameter/focusPoint = Vector2(0.5, 0.5)
+
+[node name="main" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+material = SubResource("ShaderMaterial_tbgi4")
+offset_left = -5255.0
+offset_top = -3317.0
+offset_right = 5372.0
+offset_bottom = 3389.0
+
+[node name="MapManager" type="Node2D" parent="."]
+position = Vector2(-5639, -3764)
+script = ExtResource("1_sugp2")
+
+[node name="player" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(-55, 49)
+scale = Vector2(1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+
+[node name="edibleSmall" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(225, 252)
+
+[node name="edibleSmall2" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(302, -7)
+
+[node name="shop" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(341, -369)
+
+[node name="edibleSmall3" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(426, -280)
+
+[node name="edibleSmall4" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(201, -367)
