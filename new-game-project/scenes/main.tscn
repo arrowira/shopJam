@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Shader" path="res://background.gdshader" id="1_jyhfs"]
+[ext_resource type="Shader" uid="uid://cgrflosweqrbk" path="res://background.gdshader" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://cvrqwa6r4hc7a" path="res://scripts/MapManager.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="3_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/shop.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/medShop.tscn" id="5_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://d0ffm63o5vvqr" path="res://pig game music.mp3" id="6_tefeu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
