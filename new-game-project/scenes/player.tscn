@@ -522,6 +522,15 @@ text = "Lbs"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/winScreen"]
 stream = ExtResource("19_60mlk")
 
+[node name="Button" type="Button" parent="CanvasLayer/winScreen"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 531.0
+offset_right = 213.0
+offset_bottom = 598.0
+theme_override_font_sizes/font_size = 30
+text = "RETRY"
+
 [node name="startScreen" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
@@ -561,4 +570,5 @@ scale = Vector2(0.9999991, 0.99999917)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [connection signal="area_entered" from="eatBox" to="." method="_on_eat_box_area_entered"]
+[connection signal="button_down" from="CanvasLayer/winScreen/Button" to="CanvasLayer/winScreen" method="_on_button_button_down"]
 [connection signal="timeout" from="CanvasLayer/startScreen/startTime" to="CanvasLayer/startScreen" method="_on_start_time_timeout"]

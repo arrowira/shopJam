@@ -18,3 +18,7 @@ func win(weight):
 	fillAmt = (weight/maxWeight)*100
 	
 	
+
+
+func _on_button_button_down() -> void:
+	get_tree().reload_current_scene()
