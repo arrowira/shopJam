@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0ffm63o5vvqr"
+path="res://.godot/imported/pig game music.mp3-074cf607a0f607a7faba4ec8270f8544.mp3str"
+
+[deps]
+
+source_file="res://pig game music.mp3"
+dest_files=["res://.godot/imported/pig game music.mp3-074cf607a0f607a7faba4ec8270f8544.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=140.0
+beat_count=386
+bar_beats=4

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=8 format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Shader" path="res://background.gdshader" id="1_jyhfs"]
+[ext_resource type="Shader" uid="uid://cgrflosweqrbk" path="res://background.gdshader" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://cvrqwa6r4hc7a" path="res://scripts/MapManager.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/shop.tscn" id="5_tbgi4"]
+[ext_resource type="AudioStream" uid="uid://d0ffm63o5vvqr" path="res://pig game music.mp3" id="6_tefeu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_jyhfs")
@@ -52,3 +53,7 @@ position = Vector2(426, -280)
 
 [node name="edibleSmall4" parent="." instance=ExtResource("3_tbgi4")]
 position = Vector2(201, -367)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_tefeu")
+autoplay = true

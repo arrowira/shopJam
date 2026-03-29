@@ -337,7 +337,7 @@ texture = ExtResource("7_jej6c")
 
 [node name="Sprite2D2" type="Sprite2D" parent="pigparts"]
 position = Vector2(-4.888758, 11.556219)
-scale = Vector2(0.067318775, 0.0720268)
+scale = Vector2(0.06, 0.065)
 texture = ExtResource("8_f1ej7")
 
 [node name="head" type="Sprite2D" parent="pigparts"]

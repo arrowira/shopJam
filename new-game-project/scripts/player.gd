@@ -36,6 +36,7 @@ func _physics_process(delta: float) -> void:
 				size+=area.getValue()
 				$bite.pitch_scale = 1+randf_range(-0.5,0.5)
 				$bite.play()
+				scale.x += 0.5 * (1.3/size)
 				area.queue_free()
 				print(size)
 	
