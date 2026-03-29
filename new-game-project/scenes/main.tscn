@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=15 format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Shader" uid="uid://cgrflosweqrbk" path="res://background.gdshader" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="2_jyhfs"]
@@ -14,8 +14,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_jyhfs")
-shader_parameter/innerColor = Color(0.29140478, 0.20404354, 0.097637616, 1)
-shader_parameter/outerColor = Color(0.36517084, 0.25176942, 0.16937906, 1)
+shader_parameter/innerColor = Color(0.3415971, 0.39426935, 0.24764162, 1)
+shader_parameter/outerColor = Color(0.22794116, 0.30973968, 0.14102846, 1)
 shader_parameter/scale = 20.0
 shader_parameter/timeMod = 0.0
 shader_parameter/pixelation = 0.01
@@ -24,15 +24,21 @@ shader_parameter/sharp = 3.0
 shader_parameter/moveSpeed = 1.0
 shader_parameter/focusPoint = Vector2(0.5, 0.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya4ey"]
+size = Vector2(16075, 1934)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb6dy"]
+size = Vector2(2686, 12840)
+
 [node name="main" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -100
 material = SubResource("ShaderMaterial_tbgi4")
-offset_left = -6691.0
-offset_top = -6036.0
-offset_right = 6356.0
-offset_bottom = 4179.0
+offset_left = -7876.0
+offset_top = -7104.0
+offset_right = 7935.0
+offset_bottom = 5224.0
 
 [node name="player" parent="." instance=ExtResource("2_jyhfs")]
 position = Vector2(-55, 49)
@@ -612,3 +618,21 @@ message = "Would you like some cookies"
 [node name="granny3" parent="." instance=ExtResource("8_tipki")]
 position = Vector2(-4000, -3142)
 message = "If I were you I would give this game a perfect rating!"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(90.5, 4506)
+shape = SubResource("RectangleShape2D_ya4ey")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(91, -6177)
+shape = SubResource("RectangleShape2D_ya4ey")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-7477, 233)
+shape = SubResource("RectangleShape2D_eb6dy")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(7519, 233)
+shape = SubResource("RectangleShape2D_eb6dy")
