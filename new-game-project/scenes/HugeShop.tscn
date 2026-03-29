@@ -1,0 +1,477 @@
+[gd_scene load_steps=15 format=3 uid="uid://uafqht24u1u8"]
+
+[ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_ckffu"]
+[ext_resource type="Texture2D" uid="uid://c2lgdrh1bo6aj" path="res://sprites/bigShop-1.png.png" id="2_fdmqu"]
+[ext_resource type="Texture2D" uid="uid://cq4b3ksopqlrd" path="res://sprites/bigShop-2.png.png" id="3_rs0h5"]
+[ext_resource type="Texture2D" uid="uid://dvgxf0bpnuvc3" path="res://sprites/openSign.png" id="4_0tdto"]
+[ext_resource type="Script" path="res://scripts/openSign.gd" id="5_6ky2t"]
+[ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="6_om5u0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
+size = Vector2(1692, 1133)
+
+[sub_resource type="Animation" id="Animation_032fp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1l46r"]
+resource_name = "shopIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2fc2m"]
+resource_name = "shopOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8r1wq"]
+_data = {
+&"RESET": SubResource("Animation_032fp"),
+&"shopIn": SubResource("Animation_1l46r"),
+&"shopOut": SubResource("Animation_2fc2m")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eoffu"]
+size = Vector2(33, 1197.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t00tp"]
+size = Vector2(1780, 26.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vn8n"]
+size = Vector2(658, 26)
+
+[node name="bigShop" type="Node2D"]
+script = ExtResource("1_ckffu")
+
+[node name="ColorRect2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(934, 794.10944)
+scale = Vector2(29.25, 24.473587)
+texture = ExtResource("2_fdmqu")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+z_index = 100
+offset_left = -13.0
+offset_top = -238.0
+offset_right = 949.0
+offset_bottom = 955.0
+scale = Vector2(2, 2)
+texture = ExtResource("3_rs0h5")
+
+[node name="OpenSign2" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(70.500015, 765.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0tdto")
+
+[node name="OpenSign" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(78.5, 955)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0tdto")
+
+[node name="OpenSign3" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(498, 777.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0tdto")
+script = ExtResource("5_6ky2t")
+
+[node name="OpenSign4" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(872.5, 781.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0tdto")
+
+[node name="OpenSign5" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(279, 864.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0tdto")
+
+[node name="OpenSign7" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(682, 873.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0tdto")
+
+[node name="OpenSign6" type="Sprite2D" parent="ColorRect"]
+z_index = 860
+position = Vector2(879.4999, 947.5)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0tdto")
+script = ExtResource("5_6ky2t")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(483.00006, 412)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(449.99994, 525.5)
+shape = SubResource("RectangleShape2D_xfvoa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8r1wq")
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(46.5, 926.75)
+shape = SubResource("RectangleShape2D_eoffu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1819, 968)
+shape = SubResource("RectangleShape2D_eoffu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(952, 350)
+shape = SubResource("RectangleShape2D_t00tp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(361, 1545)
+shape = SubResource("RectangleShape2D_8vn8n")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1521, 1542)
+shape = SubResource("RectangleShape2D_8vn8n")
+
+[node name="edibleSmall" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(138, 1015)
+
+[node name="edibleSmall2" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(137, 911)
+
+[node name="edibleSmall3" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(137, 806)
+
+[node name="edibleSmall4" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(133, 720)
+
+[node name="edibleSmall5" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(134, 623)
+
+[node name="edibleSmall6" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(134, 538)
+
+[node name="edibleSmall33" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(155, 1454)
+
+[node name="edibleSmall34" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(154, 1350)
+
+[node name="edibleSmall35" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(154, 1245)
+
+[node name="edibleSmall36" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(139, 1128)
+
+[node name="edibleSmall7" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(133, 439)
+
+[node name="edibleSmall8" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1699, 1027)
+
+[node name="edibleSmall9" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1700, 929)
+
+[node name="edibleSmall10" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1700, 824)
+
+[node name="edibleSmall11" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1696, 738)
+
+[node name="edibleSmall12" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1697, 641)
+
+[node name="edibleSmall13" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1697, 556)
+
+[node name="edibleSmall14" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1696, 457)
+
+[node name="edibleSmall28" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1705, 1479)
+
+[node name="edibleSmall29" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1706, 1381)
+
+[node name="edibleSmall30" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1706, 1276)
+
+[node name="edibleSmall31" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1702, 1190)
+
+[node name="edibleSmall32" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1703, 1093)
+
+[node name="edibleSmall15" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(513, 603)
+
+[node name="edibleSmall16" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(426, 636)
+
+[node name="edibleSmall17" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(396, 703)
+
+[node name="edibleSmall18" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(441, 767)
+
+[node name="edibleSmall19" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(522, 798)
+
+[node name="edibleSmall20" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(606, 763)
+
+[node name="edibleSmall21" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(652, 699)
+
+[node name="edibleSmall22" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(596, 636)
+
+[node name="edibleSmall23" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(929, 594)
+
+[node name="edibleSmall24" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(842, 627)
+
+[node name="edibleSmall41" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(812, 694)
+
+[node name="edibleSmall42" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(857, 758)
+
+[node name="edibleSmall43" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(938, 789)
+
+[node name="edibleSmall44" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1022, 754)
+
+[node name="edibleSmall45" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1068, 690)
+
+[node name="edibleSmall46" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1012, 627)
+
+[node name="edibleSmall47" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1347, 596)
+
+[node name="edibleSmall48" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1260, 629)
+
+[node name="edibleSmall49" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1230, 696)
+
+[node name="edibleSmall50" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1275, 760)
+
+[node name="edibleSmall51" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1356, 791)
+
+[node name="edibleSmall52" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1440, 756)
+
+[node name="edibleSmall53" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1486, 692)
+
+[node name="edibleSmall54" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1430, 629)
+
+[node name="edibleSmall55" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(526, 905)
+
+[node name="edibleSmall56" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(439, 938)
+
+[node name="edibleSmall57" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(409, 1005)
+
+[node name="edibleSmall58" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(454, 1069)
+
+[node name="edibleSmall59" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(535, 1100)
+
+[node name="edibleSmall60" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(619, 1065)
+
+[node name="edibleSmall61" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(665, 1001)
+
+[node name="edibleSmall62" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(609, 938)
+
+[node name="edibleSmall63" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(942, 896)
+
+[node name="edibleSmall64" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(855, 929)
+
+[node name="edibleSmall65" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(825, 996)
+
+[node name="edibleSmall66" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(870, 1060)
+
+[node name="edibleSmall67" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(951, 1091)
+
+[node name="edibleSmall68" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1035, 1056)
+
+[node name="edibleSmall69" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1081, 992)
+
+[node name="edibleSmall70" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1025, 929)
+
+[node name="edibleSmall71" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1360, 898)
+
+[node name="edibleSmall72" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1273, 931)
+
+[node name="edibleSmall73" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1243, 998)
+
+[node name="edibleSmall74" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1288, 1062)
+
+[node name="edibleSmall75" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1369, 1093)
+
+[node name="edibleSmall76" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1453, 1058)
+
+[node name="edibleSmall77" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1499, 994)
+
+[node name="edibleSmall78" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1443, 931)
+
+[node name="edibleSmall79" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(537, 1224)
+
+[node name="edibleSmall80" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(450, 1257)
+
+[node name="edibleSmall81" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(420, 1324)
+
+[node name="edibleSmall82" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(465, 1388)
+
+[node name="edibleSmall83" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(546, 1419)
+
+[node name="edibleSmall84" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(630, 1384)
+
+[node name="edibleSmall85" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(676, 1320)
+
+[node name="edibleSmall86" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(620, 1257)
+
+[node name="edibleSmall87" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(953, 1215)
+
+[node name="edibleSmall88" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(866, 1248)
+
+[node name="edibleSmall89" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(836, 1315)
+
+[node name="edibleSmall90" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(881, 1379)
+
+[node name="edibleSmall91" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(962, 1410)
+
+[node name="edibleSmall92" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1046, 1375)
+
+[node name="edibleSmall93" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1092, 1311)
+
+[node name="edibleSmall94" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1036, 1248)
+
+[node name="edibleSmall95" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1371, 1217)
+
+[node name="edibleSmall96" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1284, 1250)
+
+[node name="edibleSmall97" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1254, 1317)
+
+[node name="edibleSmall98" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1299, 1381)
+
+[node name="edibleSmall99" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1380, 1412)
+
+[node name="edibleSmall100" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1464, 1377)
+
+[node name="edibleSmall101" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1510, 1313)
+
+[node name="edibleSmall102" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1454, 1250)
+
+[node name="edibleSmall25" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(318, 422)
+
+[node name="edibleSmall26" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(513, 419)
+
+[node name="edibleSmall27" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(716, 416)
+
+[node name="edibleSmall37" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1141, 431)
+
+[node name="edibleSmall40" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(940, 427)
+
+[node name="edibleSmall38" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1336, 428)
+
+[node name="edibleSmall39" parent="." instance=ExtResource("6_om5u0")]
+position = Vector2(1539, 425)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
