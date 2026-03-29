@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=16 format=3 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Texture2D" uid="uid://dg780s33tena6" path="res://sprites/pig/Screenshot 2026-03-27 231034.png" id="1_4flbx"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://5571id2hsskv" path="res://sprites/pig/fat_pig_tail.png" id="3_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://cx1lnisy0tuqy" path="res://sprites/pig/fat_pig_leg_L2.png" id="4_y4r1p"]
 [ext_resource type="Texture2D" uid="uid://c10aspvynrloa" path="res://sprites/pig/fat_pig_leg_R2.png" id="5_d2wvv"]
@@ -9,6 +9,94 @@
 [ext_resource type="Texture2D" uid="uid://3swojbxnkt1t" path="res://sprites/pig/fat_pig_leg_R1.png" id="7_jej6c"]
 [ext_resource type="Texture2D" uid="uid://djwrg5pvi8anp" path="res://sprites/pig/fat_pig_body.png" id="8_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://c2mepje8j2isr" path="res://sprites/pig/fat_pig_head.png" id="9_oprun"]
+
+[sub_resource type="Animation" id="Animation_ur7pv"]
+resource_name = "Pig Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.27, 0.54, 0.78),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(52.97244, -4.027557), Vector2(36, 6.9999995), Vector2(50.999996, -3.9999995), Vector2(59, 6.9999995)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.51, 0.74),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-4.888758, 11.556219), Vector2(-4, 20), Vector2(-6, 12.000001), Vector2(-5, 21)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18.99932, 60.99864)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-26.255432, 62.718075)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32.375, 55.000004)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.8349223, 57.11005)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite2D7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.24604845, 0.53896326, 0.72642875),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-65.778305, -17.99881), Vector2(-68.00001, -11.000002), Vector2(-65, -25), Vector2(-65, -14.000003)]
+}
 
 [sub_resource type="Animation" id="Animation_qfm1y"]
 resource_name = "Pig walk"
@@ -98,13 +186,98 @@ tracks/6/keys = {
 "values": [Vector2(-68, -13.000003), Vector2(-64, -22), Vector2(-67.00001, -11.000002), Vector2(-64.00001, -22)]
 }
 
-[sub_resource type="Animation" id="Animation_ur7pv"]
-resource_name = "Pig Idle"
+[sub_resource type="Animation" id="Animation_y4r1p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(52.97244, -4.027557)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4.888758, 11.556219)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18.99932, 60.99864)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-26.255432, 62.718075)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32.375, 55.000004)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7.8349223, 57.11005)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite2D7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-65.778305, -17.99881)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fulsm"]
 _data = {
 &"Pig Idle": SubResource("Animation_ur7pv"),
-&"Pig walk": SubResource("Animation_qfm1y")
+&"Pig walk": SubResource("Animation_qfm1y"),
+&"RESET": SubResource("Animation_y4r1p")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
@@ -130,37 +303,37 @@ libraries = {
 [node name="pigparts" type="Node2D" parent="."]
 
 [node name="Sprite2D7" type="Sprite2D" parent="pigparts"]
-position = Vector2(-64.00001, -22)
+position = Vector2(-65.778305, -17.99881)
 scale = Vector2(0.05985929, 0.0791139)
 texture = ExtResource("3_ur7pv")
 
 [node name="Sprite2D6" type="Sprite2D" parent="pigparts"]
-position = Vector2(-12.571429, 62.714287)
+position = Vector2(-7.8349223, 57.11005)
 scale = Vector2(0.091814145, 0.1142857)
 texture = ExtResource("4_y4r1p")
 
 [node name="Sprite2D5" type="Sprite2D" parent="pigparts"]
-position = Vector2(33.333332, 51.583336)
-scale = Vector2(0.1212871, 0.09235668)
+position = Vector2(32.375, 55.000004)
+scale = Vector2(0.11509898, 0.09235668)
 texture = ExtResource("5_d2wvv")
 
 [node name="Sprite2D4" type="Sprite2D" parent="pigparts"]
-position = Vector2(-29.333334, 62.111115)
+position = Vector2(-26.255432, 62.718075)
 scale = Vector2(0.07464031, 0.082733795)
 texture = ExtResource("6_3v2ag")
 
 [node name="Sprite2D3" type="Sprite2D" parent="pigparts"]
-position = Vector2(16.529411, 62.000004)
+position = Vector2(18.99932, 60.99864)
 scale = Vector2(0.0979021, 0.083072096)
 texture = ExtResource("7_jej6c")
 
 [node name="Sprite2D2" type="Sprite2D" parent="pigparts"]
-position = Vector2(-3.4444513, 13.222229)
+position = Vector2(-4.888758, 11.556219)
 scale = Vector2(0.067318775, 0.0720268)
 texture = ExtResource("8_f1ej7")
 
 [node name="Sprite2D" type="Sprite2D" parent="pigparts"]
-position = Vector2(51.2, -5.8)
+position = Vector2(52.97244, -4.027557)
 scale = Vector2(0.08006886, 0.07029751)
 texture = ExtResource("9_oprun")
 
