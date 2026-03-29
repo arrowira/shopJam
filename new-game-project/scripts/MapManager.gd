@@ -61,6 +61,6 @@ func _ready() -> void:
 				var REM = RoadObj.instantiate()
 				REM.position = Vector2(XPos, YPos)
 				add_child(REM)
-			XPos += 64
-		YPos += 64
+			XPos += 640
+		YPos += 640
 		XPos = 0
