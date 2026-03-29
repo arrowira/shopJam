@@ -1,7 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkuwasplla63r"]
+[gd_scene load_steps=14 format=3 uid="uid://bkuwasplla63r"]
 
-[ext_resource type="Texture2D" uid="uid://jwq2i0tikjfm" path="res://sprites/Screenshot 2026-03-27 232336.png" id="1_5y4q8"]
 [ext_resource type="Script" uid="uid://b07wcde4avcxl" path="res://scripts/edible.gd" id="1_r1t2f"]
+[ext_resource type="Texture2D" uid="uid://f126xefpkpo6" path="res://sprites/edibles/alladin lamp.png" id="2_361ec"]
+[ext_resource type="Texture2D" uid="uid://c2pi0e0mo315" path="res://sprites/edibles/flowervase.png" id="3_7y1tu"]
+[ext_resource type="Texture2D" uid="uid://bv0v0qfdw8hj5" path="res://sprites/edibles/hairbrush.png" id="4_d5vax"]
+[ext_resource type="Texture2D" uid="uid://b4loj1dlessnj" path="res://sprites/edibles/lamp.png" id="5_ojwbd"]
+[ext_resource type="Texture2D" uid="uid://vre7awcecmjt" path="res://sprites/edibles/lightningInABottle.png" id="6_mpx2b"]
+[ext_resource type="Texture2D" uid="uid://vgol5u5qu2c0" path="res://sprites/edibles/piggybank.png" id="7_1vsv6"]
+[ext_resource type="Texture2D" uid="uid://sstq0kjk15aw" path="res://sprites/edibles/rubberduck.png" id="8_0lfyd"]
+[ext_resource type="Texture2D" uid="uid://dgq44ieaq48bw" path="res://sprites/edibles/Rubik_cube.png" id="9_2pdv5"]
+[ext_resource type="Texture2D" uid="uid://7x0oq7xkr2yo" path="res://sprites/edibles/saxaphone.png" id="10_ki3fb"]
+[ext_resource type="Texture2D" uid="uid://bqbtffv13sqvs" path="res://sprites/edibles/snowglobe.png" id="11_y4458"]
+[ext_resource type="Texture2D" uid="uid://c3jt0eveiquwu" path="res://sprites/edibles/violin.png" id="12_o0jab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1t2f"]
 size = Vector2(98, 71)
@@ -9,11 +19,64 @@ size = Vector2(98, 71)
 [node name="edibleSmall" type="Area2D" groups=["edible"]]
 script = ExtResource("1_r1t2f")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1.9999995)
-scale = Vector2(1, 0.5522388)
-texture = ExtResource("1_5y4q8")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -3.5)
 shape = SubResource("RectangleShape2D_r1t2f")
+
+[node name="sprites" type="Node2D" parent="."]
+position = Vector2(-1.999999, 1.0000038)
+scale = Vector2(0.04, 0.04)
+
+[node name="AlladinLamp" type="Sprite2D" parent="sprites"]
+visible = false
+texture = ExtResource("2_361ec")
+
+[node name="Flowervase" type="Sprite2D" parent="sprites"]
+visible = false
+texture = ExtResource("3_7y1tu")
+
+[node name="Hairbrush" type="Sprite2D" parent="sprites"]
+visible = false
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_d5vax")
+
+[node name="Lamp" type="Sprite2D" parent="sprites"]
+visible = false
+texture = ExtResource("5_ojwbd")
+
+[node name="LightningInABottle" type="Sprite2D" parent="sprites"]
+visible = false
+position = Vector2(0, -1)
+texture = ExtResource("6_mpx2b")
+
+[node name="Piggybank" type="Sprite2D" parent="sprites"]
+visible = false
+position = Vector2(-180, 113)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_1vsv6")
+
+[node name="Rubberduck" type="Sprite2D" parent="sprites"]
+visible = false
+position = Vector2(0, -1)
+texture = ExtResource("8_0lfyd")
+
+[node name="RubikCube" type="Sprite2D" parent="sprites"]
+visible = false
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_2pdv5")
+
+[node name="Saxaphone" type="Sprite2D" parent="sprites"]
+visible = false
+scale = Vector2(8, 8)
+texture = ExtResource("10_ki3fb")
+
+[node name="Snowglobe" type="Sprite2D" parent="sprites"]
+visible = false
+position = Vector2(0, -1)
+texture = ExtResource("11_y4458")
+
+[node name="Violin" type="Sprite2D" parent="sprites"]
+visible = false
+position = Vector2(-1, 0)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("12_o0jab")
