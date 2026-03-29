@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=20 format=3 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://b2vswt3i7gmvi" path="res://sprites/white-circle-hi.png" id="2_ur7pv"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://3swojbxnkt1t" path="res://sprites/pig/fat_pig_leg_R1.png" id="7_jej6c"]
 [ext_resource type="Texture2D" uid="uid://djwrg5pvi8anp" path="res://sprites/pig/fat_pig_body.png" id="8_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://c2mepje8j2isr" path="res://sprites/pig/fat_pig_head.png" id="9_oprun"]
+[ext_resource type="AudioStream" uid="uid://dyhhf62ubvgqt" path="res://freesound_community-oink-40664.mp3" id="10_jej6c"]
+[ext_resource type="AudioStream" uid="uid://4ajhq247rbpj" path="res://bite.mp3" id="10_y4r1p"]
+[ext_resource type="AudioStream" uid="uid://c2vmoy1rok8df" path="res://freesound_community-pig-sound-47168.mp3" id="11_f1ej7"]
+[ext_resource type="AudioStream" uid="uid://ck1hfstss0447" path="res://freesound_community-pig-squeak-47166.mp3" id="12_oprun"]
 
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "Pig Idle"
@@ -347,5 +351,22 @@ shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="eatBox"]
 shape = SubResource("CircleShape2D_onrkg")
+
+[node name="oinkManager" type="Node2D" parent="."]
+
+[node name="oink" type="AudioStreamPlayer" parent="oinkManager"]
+stream = ExtResource("10_jej6c")
+volume_db = -2.0
+
+[node name="oink2" type="AudioStreamPlayer" parent="oinkManager"]
+stream = ExtResource("11_f1ej7")
+volume_db = -2.0
+
+[node name="oink3" type="AudioStreamPlayer" parent="oinkManager"]
+stream = ExtResource("12_oprun")
+volume_db = -1.908
+
+[node name="bite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_y4r1p")
 
 [connection signal="area_entered" from="eatBox" to="." method="_on_eat_box_area_entered"]
