@@ -1,6 +1,6 @@
 extends Control
 
-var maxWeight = 200.0
+var maxWeight = 400.0
 
 var fillAmt = 0
 

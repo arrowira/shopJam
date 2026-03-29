@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	z_index = position.y/10.0
 	var input = Input.get_vector("right", "left", "up", "down").normalized()
 	velocity += input * speed
-	velocity *= 0.9
+	velocity *= 0.8
 	t+=1
 	cSec -= (100)/60.0
 	lastSec = sec
@@ -39,8 +39,11 @@ func _physics_process(delta: float) -> void:
 	
 	if input.length() > 0.5:
 		$piganims.play("Pig walk")
+		$foot.volume_db = 0
 	else:
 		$piganims.play("Pig Idle")
+		$foot.volume_db = -80
+		
 	
 	if input.x>0.1:
 		$pigparts.scale.x = 1
