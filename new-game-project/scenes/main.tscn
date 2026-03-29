@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Shader" uid="uid://cgrflosweqrbk" path="res://background.gdshader" id="1_jyhfs"]
-[ext_resource type="Script" uid="uid://cvrqwa6r4hc7a" path="res://scripts/MapManager.gd" id="1_sugp2"]
+[ext_resource type="Shader" path="res://background.gdshader" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="3_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/medShop.tscn" id="5_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://d0ffm63o5vvqr" path="res://pig game music.mp3" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://cj7clvjr2xhlv" path="res://scenes/bigShop.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://bxv3ppyoe5ikc" path="res://scenes/granny.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" uid="uid://b1jpuvdommygm" path="res://scenes/police.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://crpk7v5yby1r4" path="res://scenes/bigShop.tscn" id="7_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://bugr7hcm8st57" path="res://sprites/Road.png" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/medShop.tscn" id="8_choun"]
+[ext_resource type="PackedScene" path="res://scenes/granny.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" path="res://scenes/police.tscn" id="9_85g3d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_jyhfs")
@@ -32,10 +32,6 @@ offset_top = -3317.0
 offset_right = 5372.0
 offset_bottom = 3389.0
 
-[node name="MapManager" type="Node2D" parent="."]
-position = Vector2(-5639, -3764)
-script = ExtResource("1_sugp2")
-
 [node name="player" parent="." instance=ExtResource("2_jyhfs")]
 position = Vector2(-55, 49)
 scale = Vector2(1, 1)
@@ -48,9 +44,6 @@ position = Vector2(225, 252)
 [node name="edibleSmall2" parent="." instance=ExtResource("3_tbgi4")]
 position = Vector2(302, -7)
 
-[node name="shop" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(341, -369)
-
 [node name="edibleSmall3" parent="." instance=ExtResource("3_tbgi4")]
 position = Vector2(426, -280)
 
@@ -61,11 +54,130 @@ position = Vector2(201, -367)
 stream = ExtResource("6_tefeu")
 autoplay = true
 
-[node name="medShop" parent="." instance=ExtResource("7_o6xl0")]
-position = Vector2(-2271, -481)
-
 [node name="npc" parent="." instance=ExtResource("8_tipki")]
 position = Vector2(222, 55)
 
 [node name="policeman" parent="." instance=ExtResource("9_85g3d")]
 position = Vector2(-353, 100)
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Road" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-2209, -172.99982)
+rotation = -1.5707964
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road13" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-1587.0002, -223)
+rotation = -1.5707964
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road9" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-2201.0002, -923)
+rotation = -1.5707964
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road10" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-2191, -1682.9999)
+rotation = -1.5707964
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road11" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-2193, -2479)
+rotation = -1.5707964
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road12" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-2188.9998, -3246)
+rotation = -1.5707964
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road6" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(456.99976, -413.99982)
+rotation = -1.5848242
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road3" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-83, 131)
+rotation = -3.1415927
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road7" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-871.99994, 131)
+rotation = -3.1415927
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road8" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-1667.9999, 130.00002)
+rotation = -3.1415927
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road15" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-1631, -2171)
+rotation = -3.1415927
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road14" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(-1638, -1092.9999)
+rotation = -3.1415927
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Road4" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(712.99994, 139)
+rotation = -3.1415927
+scale = Vector2(0.691, 0.79)
+texture = ExtResource("8_85g3d")
+
+[node name="Road5" type="Sprite2D" parent="Map"]
+z_index = -1
+position = Vector2(674.99994, 189.00002)
+rotation = -3.1415927
+scale = Vector2(0.691, 0.3100001)
+texture = ExtResource("8_85g3d")
+
+[node name="Road2" type="Sprite2D" parent="Map"]
+position = Vector2(-2197, 921.99994)
+scale = Vector2(0.691, 0.75)
+texture = ExtResource("8_85g3d")
+
+[node name="Shops" type="Node2D" parent="Map"]
+
+[node name="medShop" parent="Map/Shops" instance=ExtResource("8_choun")]
+position = Vector2(-2027, -931)
+
+[node name="medShop2" parent="Map/Shops" instance=ExtResource("8_choun")]
+position = Vector2(-2027, -1866)
+
+[node name="medShop3" parent="Map/Shops" instance=ExtResource("8_choun")]
+position = Vector2(-2012, -2907)
+
+[node name="medShop4" parent="Map/Shops" instance=ExtResource("8_choun")]
+position = Vector2(-2626, -4212)
+
+[node name="bigShop" parent="Map/Shops" instance=ExtResource("7_o6xl0")]
+position = Vector2(24, -1078)

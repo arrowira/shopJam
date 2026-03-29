@@ -1,11 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cj7clvjr2xhlv"]
+[gd_scene load_steps=15 format=3 uid="uid://crpk7v5yby1r4"]
 
 [ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_d4q83"]
 [ext_resource type="Texture2D" uid="uid://c2lgdrh1bo6aj" path="res://sprites/bigShop-1.png.png" id="2_d4q83"]
 [ext_resource type="Texture2D" uid="uid://cq4b3ksopqlrd" path="res://sprites/bigShop-2.png.png" id="3_5icma"]
 [ext_resource type="Texture2D" uid="uid://dvgxf0bpnuvc3" path="res://sprites/openSign.png" id="4_4uyd5"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="4_5icma"]
-[ext_resource type="Script" uid="uid://ciord86o3iys5" path="res://scripts/openSign.gd" id="5_d1otv"]
+[ext_resource type="Script" path="res://scripts/openSign.gd" id="5_d1otv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
 size = Vector2(870, 670)
@@ -71,7 +71,7 @@ size = Vector2(924, 26.125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vn8n"]
 size = Vector2(356, 26)
 
-[node name="medShop" type="Node2D"]
+[node name="bigShop" type="Node2D"]
 script = ExtResource("1_d4q83")
 
 [node name="ColorRect2" type="Sprite2D" parent="."]
