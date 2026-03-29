@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=10 format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Shader" uid="uid://cgrflosweqrbk" path="res://background.gdshader" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://cvrqwa6r4hc7a" path="res://scripts/MapManager.gd" id="1_sugp2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/medShop.tscn" id="5_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://d0ffm63o5vvqr" path="res://pig game music.mp3" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://cj7clvjr2xhlv" path="res://scenes/bigShop.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://bxv3ppyoe5ikc" path="res://scenes/npc.tscn" id="8_tipki"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_jyhfs")
@@ -61,3 +62,6 @@ autoplay = true
 
 [node name="medShop" parent="." instance=ExtResource("7_o6xl0")]
 position = Vector2(-2271, -481)
+
+[node name="npc" parent="." instance=ExtResource("8_tipki")]
+position = Vector2(222, 55)
