@@ -141,7 +141,7 @@ scale = Vector2(15.093749, 14.828125)
 texture = ExtResource("2_eoffu")
 
 [node name="ColorRect" type="TextureRect" parent="."]
-z_index = 1
+z_index = 100
 offset_left = 3.000061
 offset_top = 2.0
 offset_right = 965.00006

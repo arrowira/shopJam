@@ -291,7 +291,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(106.250015, 68.75002)
+size = Vector2(146.87506, 118.125046)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 86.023254
@@ -366,8 +366,8 @@ texture = ExtResource("10_f1ej7")
 script = ExtResource("11_oprun")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.3749995, 21.87499)
-scale = Vector2(0.99999964, 0.99999964)
+position = Vector2(21.562508, 17.812492)
+scale = Vector2(0.9999994, 0.9999994)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="eatBox" type="Area2D" parent="."]
