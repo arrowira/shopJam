@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/medShop.tscn" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://bxv3ppyoe5ikc" path="res://scenes/granny.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://b1jpuvdommygm" path="res://scenes/police.tscn" id="9_85g3d"]
-[ext_resource type="PackedScene" path="res://scenes/HugeShop.tscn" id="10_choun"]
-[ext_resource type="PackedScene" path="res://scenes/SmallShop.tscn" id="10_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://bajoht55ddb3a" path="res://scenes/HugeShop.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://e33pkehngjc1" path="res://scenes/SmallShop.tscn" id="10_ya4ey"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_jyhfs")
@@ -57,10 +57,23 @@ stream = ExtResource("6_tefeu")
 autoplay = true
 
 [node name="npc" parent="." instance=ExtResource("8_tipki")]
-position = Vector2(222, 55)
+position = Vector2(-338, 1938)
+message = "Whats the matter with you? that stuff was ours!"
+
+[node name="npc3" parent="." instance=ExtResource("8_tipki")]
+position = Vector2(1331, -1900)
+message = "Where am I?"
+
+[node name="npc2" parent="." instance=ExtResource("8_tipki")]
+position = Vector2(-1241, -2631)
+message = "My grandkids are craving pie... PIG PIE!"
 
 [node name="policeman" parent="." instance=ExtResource("9_85g3d")]
-position = Vector2(-353, 100)
+position = Vector2(-2176, 112)
+
+[node name="policeman2" parent="." instance=ExtResource("9_85g3d")]
+position = Vector2(4284, 184)
+message = "I've been ordered to guard this warehouse. If any one were to get in, I'm sure to lose my job."
 
 [node name="Map" type="Node2D" parent="."]
 
@@ -569,7 +582,7 @@ position = Vector2(24, -1078)
 position = Vector2(-4758, -3549)
 
 [node name="bigShop3" parent="Map/Shops" instance=ExtResource("10_choun")]
-position = Vector2(3281, -1834)
+position = Vector2(3292, -1736)
 
 [node name="medShop7" parent="Map/Shops" instance=ExtResource("10_ya4ey")]
 position = Vector2(-2386, 1082)

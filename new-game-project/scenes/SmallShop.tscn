@@ -1,11 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://uaxwdelh2nns"]
+[gd_scene load_steps=15 format=3 uid="uid://e33pkehngjc1"]
 
 [ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_cidjc"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="2_iukyn"]
 [ext_resource type="Texture2D" uid="uid://cgo8f6uatovpx" path="res://sprites/medShop-1.png.png" id="3_pa6t1"]
 [ext_resource type="Texture2D" uid="uid://c3451w0csf4ir" path="res://sprites/medShop-2.png.png" id="4_4mpj0"]
 [ext_resource type="Texture2D" uid="uid://dvgxf0bpnuvc3" path="res://sprites/openSign.png" id="5_4hvh3"]
-[ext_resource type="Script" path="res://scripts/openSign.gd" id="6_vxo3w"]
+[ext_resource type="Script" uid="uid://ciord86o3iys5" path="res://scripts/openSign.gd" id="6_vxo3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
 size = Vector2(533, 442)
@@ -120,7 +120,7 @@ position = Vector2(303, 245)
 position = Vector2(303, 164)
 
 [node name="ColorRect2" type="Sprite2D" parent="."]
-z_index = -99
+z_index = -1
 position = Vector2(281, 395.99997)
 scale = Vector2(9.125, 14.828125)
 texture = ExtResource("3_pa6t1")

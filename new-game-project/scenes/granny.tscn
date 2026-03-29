@@ -28,29 +28,32 @@ position = Vector2(-6, 3)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_4wlns")
 
-[node name="SpeechBubl" type="Sprite2D" parent="."]
+[node name="SpeechBubl" type="Node2D" parent="."]
 visible = false
-position = Vector2(-12.000002, -156.99998)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-12.000002, -102.75)
+
+[node name="image" type="Sprite2D" parent="SpeechBubl"]
+position = Vector2(4, -22.624992)
+scale = Vector2(0.69999987, 0.47785705)
 texture = ExtResource("3_rv78h")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="SpeechBubl"]
-offset_left = -212.0
-offset_top = -153.0
-offset_right = 203.0
-offset_bottom = 83.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 25
-text = "rewyrewyrewyrewyrewyrewyrewyerew"
-
 [node name="RichTextLabel2" type="RichTextLabel" parent="SpeechBubl"]
-offset_left = -44.285706
-offset_top = 62.857124
-offset_right = 250.0
-offset_bottom = 151.42859
+offset_left = -96.0
+offset_top = -10.25
+offset_right = 198.2857
+offset_bottom = 78.321465
 theme_override_colors/default_color = Color(0.9153171, 0, 0.15638268, 1)
 theme_override_font_sizes/normal_font_size = 25
 text = "press E to continue"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SpeechBubl"]
+offset_left = -158.0
+offset_top = -93.25
+offset_right = 168.0
+offset_bottom = 192.44223
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "rewyrewyrewyrewyrewyrewyrewyerew"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_4wlns")

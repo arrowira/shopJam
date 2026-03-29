@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://uafqht24u1u8"]
+[gd_scene load_steps=15 format=3 uid="uid://bajoht55ddb3a"]
 
 [ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_ckffu"]
 [ext_resource type="Texture2D" uid="uid://c2lgdrh1bo6aj" path="res://sprites/bigShop-1.png.png" id="2_fdmqu"]
 [ext_resource type="Texture2D" uid="uid://cq4b3ksopqlrd" path="res://sprites/bigShop-2.png.png" id="3_rs0h5"]
 [ext_resource type="Texture2D" uid="uid://dvgxf0bpnuvc3" path="res://sprites/openSign.png" id="4_0tdto"]
-[ext_resource type="Script" path="res://scripts/openSign.gd" id="5_6ky2t"]
+[ext_resource type="Script" uid="uid://ciord86o3iys5" path="res://scripts/openSign.gd" id="5_6ky2t"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="6_om5u0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
@@ -75,7 +75,7 @@ size = Vector2(658, 26)
 script = ExtResource("1_ckffu")
 
 [node name="ColorRect2" type="Sprite2D" parent="."]
-z_index = -2
+z_index = -1
 position = Vector2(934, 794.10944)
 scale = Vector2(29.25, 24.473587)
 texture = ExtResource("2_fdmqu")
@@ -83,9 +83,9 @@ texture = ExtResource("2_fdmqu")
 [node name="ColorRect" type="TextureRect" parent="."]
 z_index = 100
 offset_left = -13.0
-offset_top = -238.0
+offset_top = -452.0
 offset_right = 949.0
-offset_bottom = 955.0
+offset_bottom = 707.5
 scale = Vector2(2, 2)
 texture = ExtResource("3_rs0h5")
 
