@@ -21,4 +21,5 @@ func win(weight):
 
 
 func _on_button_button_down() -> void:
-	get_tree().reload_current_scene()
+	Engine.time_scale = 1
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
