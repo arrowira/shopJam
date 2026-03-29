@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhq3wrtpl0y3d"
+path="res://.godot/imported/police sound.mp3-6bd3fca3be7620762f96454845d89402.mp3str"
+
+[deps]
+
+source_file="res://police sound.mp3"
+dest_files=["res://.godot/imported/police sound.mp3-6bd3fca3be7620762f96454845d89402.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

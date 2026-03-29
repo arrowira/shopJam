@@ -61,7 +61,7 @@ func _physics_process(delta: float) -> void:
 				print(size)
 			if area.name == "npcArea":
 				size+=10
-				$bite.pitch_scale = 0.5
+				$bite.pitch_scale = 0.4
 				$bite.play()
 				$pigparts/torso.scale.y += 0.0005
 				Engine.time_scale = 1

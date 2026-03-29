@@ -3,7 +3,7 @@ extends Node2D
 var textwritting = false
 var t = 0
 
-var message = "What do you think your doing! You better leave our stuff alone. I don't know what made you think you could just eat up all our goods but it ends NOW!"
+@export var message = "What do you think your doing! You better leave our stuff alone. I don't know what made you think you could just eat up all our goods but it ends NOW!"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
