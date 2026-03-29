@@ -1,16 +1,16 @@
 [gd_scene load_steps=13 format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Shader" path="res://background.gdshader" id="1_jyhfs"]
+[ext_resource type="Shader" uid="uid://cgrflosweqrbk" path="res://background.gdshader" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="3_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://d0ffm63o5vvqr" path="res://pig game music.mp3" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://crpk7v5yby1r4" path="res://scenes/bigShop.tscn" id="7_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bugr7hcm8st57" path="res://sprites/Road.png" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://lnwbof5s0xcp" path="res://scenes/medShop.tscn" id="8_choun"]
-[ext_resource type="PackedScene" path="res://scenes/granny.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" path="res://scenes/police.tscn" id="9_85g3d"]
-[ext_resource type="PackedScene" uid="uid://uafqht24u1u8" path="res://scenes/HugeShop.tscn" id="10_choun"]
-[ext_resource type="PackedScene" uid="uid://uaxwdelh2nns" path="res://scenes/SmallShop.tscn" id="10_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://bxv3ppyoe5ikc" path="res://scenes/granny.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://b1jpuvdommygm" path="res://scenes/police.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" path="res://scenes/HugeShop.tscn" id="10_choun"]
+[ext_resource type="PackedScene" path="res://scenes/SmallShop.tscn" id="10_ya4ey"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
 shader = ExtResource("1_jyhfs")
@@ -29,10 +29,10 @@ shader_parameter/focusPoint = Vector2(0.5, 0.5)
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -100
 material = SubResource("ShaderMaterial_tbgi4")
-offset_left = -5283.0
-offset_top = -4244.0
-offset_right = 5344.0
-offset_bottom = 2462.0
+offset_left = -6691.0
+offset_top = -6036.0
+offset_right = 6356.0
+offset_bottom = 4179.0
 
 [node name="player" parent="." instance=ExtResource("2_jyhfs")]
 position = Vector2(-55, 49)
@@ -65,474 +65,479 @@ position = Vector2(-353, 100)
 [node name="Map" type="Node2D" parent="."]
 
 [node name="Road" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2209, -172.99982)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road13" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-1587.0002, -223)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road9" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2201.0002, -923)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road10" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2191, -1682.9999)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road11" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2193, -2479)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road12" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2188.9998, -3246)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road20" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1179, 58.016296)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road34" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1179, 58.016296)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road35" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1186, 783)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road54" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1088.0001, 1732)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road21" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1186.9998, -691.9839)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road50" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-4298.0005, 754)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road51" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-4294.0005, 1550.0001)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road22" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1197, -1451.9838)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road23" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1195, -2247.984)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road36" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(4202, 1751.016)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road43" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(2591, 1719.0001)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road37" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(4212, 991.0161)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road55" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-392.00003, 1706)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road56" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2176, 1706)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road38" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(4210, 195.01599)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road24" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1190, -3014.9998)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road30" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-4317, -247.96826)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road31" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-4306.9995, -1007.96814)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road32" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-4308.9995, -1803.9683)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road67" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(4158.9995, -2155.984)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road68" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(4156.9995, -2951.984)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road33" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-4313.9995, -2570.9841)
 rotation = -1.5707964
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road6" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(456.99976, -413.99982)
 rotation = -1.5848242
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road3" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-83, 131)
 rotation = -3.1415927
 scale = Vector2(0.68827975, 0.75840914)
 texture = ExtResource("8_85g3d")
 
 [node name="Road7" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-871.99994, 131)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road8" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-1667.9999, 130.00002)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road57" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2553.9841, -452.99994)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road58" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-3349.984, -453.99994)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road59" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-3349.984, -453.99994)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road60" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-4070, -454.41998)
 rotation = -3.1415927
 scale = Vector2(0.56295663, 0.74253094)
 texture = ExtResource("8_85g3d")
 
 [node name="Road39" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(3999.016, 2054)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road40" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(3203.016, 2053)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road42" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1615.9999, 2047.7998)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.7308629)
 texture = ExtResource("8_85g3d")
 
 [node name="Road41" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(2411, 2050.685)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.7335968)
 texture = ExtResource("8_85g3d")
 
 [node name="Road25" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(2445.0159, 151.00002)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road26" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1649.016, 150.00003)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road27" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(4027.0159, 156.00002)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road29" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(4751.9995, 152.00002)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road28" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(3231.016, 155.00003)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road61" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(2385.0159, -1850.9999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road62" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1589.016, -1851.9999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road63" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(3171.016, -1846.9999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road64" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(2385.0159, -1850.9999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road65" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(1589.016, -1851.9999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road66" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(3964.9998, -1846.9998)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road16" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-1621.9999, -3198.9998)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road17" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-832.00006, -3197)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.76027)
 texture = ExtResource("8_85g3d")
 
 [node name="Road18" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-37.98398, -3198.3481)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.76643205)
 texture = ExtResource("8_85g3d")
 
 [node name="Road19" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(752.01587, -3196.3484)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.7767019)
 texture = ExtResource("8_85g3d")
 
 [node name="Road15" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-1631, -2171)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road14" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-1638, -1092.9999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road4" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(712.99994, 139)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.79)
 texture = ExtResource("8_85g3d")
 
 [node name="Road5" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(674.99994, 189.00002)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.3100001)
 texture = ExtResource("8_85g3d")
 
 [node name="Road69" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(718.00006, 69.49999)
 rotation = -3.1415927
 scale = Vector2(0.7899583, 0.4504322)
 texture = ExtResource("8_85g3d")
 
 [node name="Road2" type="Sprite2D" parent="Map"]
+z_index = -50
 position = Vector2(1004, 1930.9999)
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road44" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-557.98413, 2042.7999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.7308629)
 texture = ExtResource("8_85g3d")
 
 [node name="Road45" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(237.01599, 2045.685)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.7335968)
 texture = ExtResource("8_85g3d")
 
 [node name="Road46" type="Sprite2D" parent="Map"]
+z_index = -50
 position = Vector2(-1169.984, 1926)
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road47" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-2722.9841, 2038.7999)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.7308629)
 texture = ExtResource("8_85g3d")
 
 [node name="Road48" type="Sprite2D" parent="Map"]
-z_index = -1
+z_index = -50
 position = Vector2(-1927.984, 2041.685)
 rotation = -3.1415927
 scale = Vector2(0.691, 0.7335968)
 texture = ExtResource("8_85g3d")
 
 [node name="Road49" type="Sprite2D" parent="Map"]
+z_index = -50
 position = Vector2(-3334.984, 1922)
 scale = Vector2(0.691, 0.75)
 texture = ExtResource("8_85g3d")
 
 [node name="Road52" type="Sprite2D" parent="Map"]
+z_index = -50
 position = Vector2(-3950.9998, 1916)
 scale = Vector2(0.691, 0.79)
 texture = ExtResource("8_85g3d")
 
 [node name="Road53" type="Sprite2D" parent="Map"]
+z_index = -50
 position = Vector2(-3974.9998, 1920)
 scale = Vector2(0.691, 0.79)
 texture = ExtResource("8_85g3d")

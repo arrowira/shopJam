@@ -290,14 +290,14 @@ _data = {
 &"RESET": SubResource("Animation_y4r1p")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(146.87506, 118.125046)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 86.023254
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fulsm"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(103.125046, 118.125046)
 
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.8, 0.8)
@@ -364,11 +364,6 @@ position = Vector2(328.46722, 11.38021)
 scale = Vector2(0.8, 0.912)
 texture = ExtResource("10_f1ej7")
 script = ExtResource("11_oprun")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(21.562508, 17.812492)
-scale = Vector2(0.9999994, 0.9999994)
-shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="eatBox" type="Area2D" parent="."]
 
@@ -487,5 +482,10 @@ text = "Lbs"
 [node name="foot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_4r5pv")
 autoplay = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.31248325, 17.812483)
+scale = Vector2(0.9999991, 0.99999917)
+shape = SubResource("RectangleShape2D_onrkg")
 
 [connection signal="area_entered" from="eatBox" to="." method="_on_eat_box_area_entered"]
