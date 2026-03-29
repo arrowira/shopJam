@@ -428,6 +428,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = ":"
 
 [node name="winScreen" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

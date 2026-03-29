@@ -23,6 +23,10 @@ func _physics_process(delta: float) -> void:
 	sec=int(99-(t/60.0))
 	if lastSec != sec:
 		cSec = 99
+		
+	if sec <=0:
+		$CanvasLayer/winScreen.visible = true
+		$CanvasLayer/winScreen.win(size)
 	$CanvasLayer/timer/seconds.text = str(sec)
 	$CanvasLayer/timer/centiseconds.text = str(int(cSec))
 	
