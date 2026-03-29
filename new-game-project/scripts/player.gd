@@ -19,16 +19,16 @@ func _physics_process(delta: float) -> void:
 	velocity += input * speed
 	velocity *= 0.8
 	t+=1
-	cSec -= (100)/60.0
+	cSec -= Engine.time_scale*(100)/60.0
 	lastSec = sec
-	sec=int(99-(t/60.0))
-	if lastSec != sec:
+	sec-=Engine.time_scale*1/50.0
+	if int(lastSec) != int(sec):
 		cSec = 99
 		
 	if sec <=0:
 		$CanvasLayer/winScreen.visible = true
 		$CanvasLayer/winScreen.win(size)
-	$CanvasLayer/timer/seconds.text = str(sec)
+	$CanvasLayer/timer/seconds.text = str(int(sec))
 	$CanvasLayer/timer/centiseconds.text = str(int(cSec))
 	
 	if randi_range(0,oinkTimer) == 0:

@@ -77,6 +77,7 @@ message = "My grandkids are craving pie... PIG PIE!"
 
 [node name="policeman" parent="." instance=ExtResource("9_85g3d")]
 position = Vector2(-2176, 112)
+message = "You're going away for a long time. I hate you"
 
 [node name="policeman2" parent="." instance=ExtResource("9_85g3d")]
 position = Vector2(4284, 184)
