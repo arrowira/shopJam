@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://lnwbof5s0xcp"]
+[gd_scene load_steps=13 format=3 uid="uid://lnwbof5s0xcp"]
 
 [ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_bd745"]
 [ext_resource type="Texture2D" uid="uid://cgo8f6uatovpx" path="res://sprites/medShop-1.png.png" id="2_eoffu"]
+[ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="2_t00tp"]
 [ext_resource type="Texture2D" uid="uid://c3451w0csf4ir" path="res://sprites/medShop-2.png.png" id="3_t00tp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfvoa"]
@@ -70,6 +71,66 @@ size = Vector2(356, 26)
 
 [node name="medShop" type="Node2D"]
 script = ExtResource("1_bd745")
+
+[node name="edibleSmall" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(104, 520)
+
+[node name="edibleSmall2" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(104, 428)
+
+[node name="edibleSmall3" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(101, 341)
+
+[node name="edibleSmall4" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(101, 248)
+
+[node name="edibleSmall5" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(101, 167)
+
+[node name="edibleSmall6" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(851, 520)
+
+[node name="edibleSmall7" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(851, 428)
+
+[node name="edibleSmall8" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(848, 341)
+
+[node name="edibleSmall9" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(848, 248)
+
+[node name="edibleSmall10" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(848, 167)
+
+[node name="edibleSmall11" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(639, 517)
+
+[node name="edibleSmall12" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(639, 425)
+
+[node name="edibleSmall13" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(636, 338)
+
+[node name="edibleSmall14" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(636, 245)
+
+[node name="edibleSmall15" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(636, 164)
+
+[node name="edibleSmall16" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(306, 517)
+
+[node name="edibleSmall17" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(306, 425)
+
+[node name="edibleSmall18" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(303, 338)
+
+[node name="edibleSmall19" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(303, 245)
+
+[node name="edibleSmall20" parent="." instance=ExtResource("2_t00tp")]
+position = Vector2(303, 164)
 
 [node name="ColorRect2" type="Sprite2D" parent="."]
 z_index = -2
