@@ -55,5 +55,13 @@ func _physics_process(delta: float) -> void:
 				$pigparts/torso.scale.y += 0.0001
 				area.queue_free()
 				print(size)
+			if area.name == "npcArea":
+				size+=10
+				$bite.pitch_scale = 0.5
+				$bite.play()
+				$pigparts/torso.scale.y += 0.0005
+				Engine.time_scale = 1
+				area.get_parent().queue_free()
+				print(size)
 	
 	move_and_slide()
