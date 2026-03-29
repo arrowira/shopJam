@@ -39,6 +39,7 @@ position = Vector2(-55, 49)
 scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.8, 0.8)
 
 [node name="edibleSmall" parent="." instance=ExtResource("3_tbgi4")]
 position = Vector2(225, 252)
@@ -595,3 +596,19 @@ position = Vector2(849, 1082)
 
 [node name="medShop10" parent="Map/Shops" instance=ExtResource("10_ya4ey")]
 position = Vector2(2370, 1099)
+
+[node name="policeman3" parent="." instance=ExtResource("9_85g3d")]
+position = Vector2(-4487, -2310)
+message = "Its the grandma convention. You don't look old enough to be here."
+
+[node name="granny" parent="." instance=ExtResource("8_tipki")]
+position = Vector2(-3990, -2910)
+message = "hello dear"
+
+[node name="granny2" parent="." instance=ExtResource("8_tipki")]
+position = Vector2(-4536, -3079)
+message = "Would you like some cookies"
+
+[node name="granny3" parent="." instance=ExtResource("8_tipki")]
+position = Vector2(-4000, -3142)
+message = "If I were you I would give this game a perfect rating!"

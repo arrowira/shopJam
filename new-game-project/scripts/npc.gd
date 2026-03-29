@@ -12,7 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if textwritting:
-		if t< len(message)-1:
+		if t< len(message):
 			t+=1
 	$SpeechBubl/RichTextLabel.text = message.substr(0,t)
 
