@@ -29,10 +29,12 @@ offset_right = 5372.0
 offset_bottom = 3389.0
 
 [node name="MapManager" type="Node2D" parent="."]
+position = Vector2(-5639, -3764)
 script = ExtResource("1_sugp2")
 
 [node name="player" parent="." instance=ExtResource("2_jyhfs")]
 position = Vector2(-55, 49)
+scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 

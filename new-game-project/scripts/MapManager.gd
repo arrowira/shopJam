@@ -21,7 +21,7 @@ func _ready() -> void:
 	Nodes.append(Vector3(18, 9, 1))
 	Nodes.append(Vector3(9, 18, 4))
 	#Prewrite nodes
-	for i in range(randi_range(5, 10)):
+	for i in range(randi_range(3, 7)):
 		Nodes.append(Vector3(randi_range(1, MapSizeX), randi_range(1, MapSizeY), randi_range(1, 4)))
 	while(Generating):
 		if(Nodes.size() == 0):
@@ -30,8 +30,12 @@ func _ready() -> void:
 			var Direction = Nodes[i].z
 			var AddX = 0
 			var AddY = 0
-			if(randi_range(0, 50) == 50):
-				Nodes.append(Vector3(Nodes[i].x, Nodes[i].y, randi_range(1, 4)))
+			if(randi_range(0, 60) == 60):
+				if(Direction == 1 || Direction == 2):
+					Nodes.append(Vector3(Nodes[i].x, Nodes[i].y, randi_range(3, 4)))
+				else:
+					Nodes.append(Vector3(Nodes[i].x, Nodes[i].y, randi_range(1, 2)))
+				continue
 			if(randi_range(0, 20) == 20):
 				Direction = randi_range(1, 4)
 				Nodes[i].z = Direction
@@ -61,6 +65,6 @@ func _ready() -> void:
 				var REM = RoadObj.instantiate()
 				REM.position = Vector2(XPos, YPos)
 				add_child(REM)
-			XPos += 640
-		YPos += 640
+			XPos += 320
+		YPos += 320
 		XPos = 0
