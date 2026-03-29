@@ -20,6 +20,9 @@ func _ready() -> void:
 	Nodes.append(Vector3(24, 24, 3))
 	Nodes.append(Vector3(18, 9, 1))
 	Nodes.append(Vector3(9, 18, 4))
+	#Prewrite nodes
+	for i in range(randi_range(5, 10)):
+		Nodes.append(Vector3(randi_range(1, MapSizeX), randi_range(1, MapSizeY), randi_range(1, 4)))
 	while(Generating):
 		if(Nodes.size() == 0):
 			Generating = false
@@ -27,6 +30,8 @@ func _ready() -> void:
 			var Direction = Nodes[i].z
 			var AddX = 0
 			var AddY = 0
+			if(randi_range(0, 50) == 50):
+				Nodes.append(Vector3(Nodes[i].x, Nodes[i].y, randi_range(1, 4)))
 			if(randi_range(0, 20) == 20):
 				Direction = randi_range(1, 4)
 				Nodes[i].z = Direction
