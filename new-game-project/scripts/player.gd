@@ -7,11 +7,18 @@ var size = 0
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+var oinkTimer = 1000
 
 func _physics_process(delta: float) -> void:
 	var input = Input.get_vector("right", "left", "up", "down").normalized()
 	velocity += input * speed
 	velocity *= 0.9
+	
+	if randi_range(0,oinkTimer) == 0:
+		$oinkManager.get_children()[randi_range(0,2)].play()
+		oinkTimer=1000
+	else:
+		oinkTimer-=1
 	
 	if input.length() > 0.5:
 		$piganims.play("Pig walk")
@@ -27,6 +34,8 @@ func _physics_process(delta: float) -> void:
 		for area in $eatBox.get_overlapping_areas():
 			if area.is_in_group("edible"):
 				size+=area.getValue()
+				$bite.pitch_scale = 1+randf_range(-0.5,0.5)
+				$bite.play()
 				area.queue_free()
 				print(size)
 	
