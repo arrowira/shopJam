@@ -42,25 +42,32 @@ texture = ExtResource("2_361ec")
 
 [node name="Flowervase" type="Sprite2D" parent="sprites"]
 visible = false
+position = Vector2(174.99997, -675.0001)
 texture = ExtResource("3_7y1tu")
 
 [node name="Hairbrush" type="Sprite2D" parent="sprites"]
 visible = false
-scale = Vector2(0.4, 0.4)
+position = Vector2(-2.4795532e-05, 249.99988)
+rotation = 0.91805255
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_d5vax")
 
 [node name="Lamp" type="Sprite2D" parent="sprites"]
 visible = false
+position = Vector2(-25.000023, -575.0001)
+scale = Vector2(3, 3)
 texture = ExtResource("5_ojwbd")
 
 [node name="LightningInABottle" type="Sprite2D" parent="sprites"]
 visible = false
-position = Vector2(0, -1)
+position = Vector2(-25.000038, -375.0001)
+rotation = -1.1499679
+scale = Vector2(2, 2)
 texture = ExtResource("6_mpx2b")
 
 [node name="Piggybank" type="Sprite2D" parent="sprites"]
 visible = false
-position = Vector2(-180, 113)
+position = Vector2(-25.000046, -200.00009)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_1vsv6")
 
@@ -76,16 +83,18 @@ texture = ExtResource("9_2pdv5")
 
 [node name="Saxaphone" type="Sprite2D" parent="sprites"]
 visible = false
+modulate = Color(0.7581918, 0.7581918, 0.7581917, 1)
+position = Vector2(-200.00003, -675.0001)
 scale = Vector2(8, 8)
 texture = ExtResource("10_ki3fb")
 
 [node name="Snowglobe" type="Sprite2D" parent="sprites"]
 visible = false
-position = Vector2(0, -1)
+position = Vector2(-25.000023, -25.000095)
 texture = ExtResource("11_y4458")
 
 [node name="Violin" type="Sprite2D" parent="sprites"]
 visible = false
-position = Vector2(-1, 0)
+position = Vector2(-175.00003, -375.00012)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("12_o0jab")
