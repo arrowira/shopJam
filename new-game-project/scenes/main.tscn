@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Shader" uid="uid://cgrflosweqrbk" path="res://background.gdshader" id="1_jyhfs"]
+[ext_resource type="Shader" path="res://background.gdshader" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://cvrqwa6r4hc7a" path="res://scripts/MapManager.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bkuwasplla63r" path="res://scenes/edible_small.tscn" id="3_tbgi4"]
