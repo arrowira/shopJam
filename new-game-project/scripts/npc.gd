@@ -23,4 +23,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func dialogue():
 	textwritting=true
+	$SpeechBubl.visible = true
+	$AudioStreamPlayer.play()
 	Engine.time_scale = 0.01

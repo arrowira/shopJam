@@ -14,6 +14,7 @@ var cSec = 99
 var lastSec = 0
 
 func _physics_process(delta: float) -> void:
+	z_index = position.y/10.0
 	var input = Input.get_vector("right", "left", "up", "down").normalized()
 	velocity += input * speed
 	velocity *= 0.9

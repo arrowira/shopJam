@@ -135,13 +135,13 @@ position = Vector2(303, 245)
 position = Vector2(303, 164)
 
 [node name="ColorRect2" type="Sprite2D" parent="."]
-z_index = -2
+z_index = -99
 position = Vector2(480.99997, 388.99997)
 scale = Vector2(15.093749, 14.828125)
 texture = ExtResource("2_eoffu")
 
 [node name="ColorRect" type="TextureRect" parent="."]
-z_index = 100
+z_index = 1
 offset_left = 3.000061
 offset_top = 2.0
 offset_right = 965.00006
