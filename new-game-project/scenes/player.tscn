@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=26 format=3 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://b2vswt3i7gmvi" path="res://sprites/white-circle-hi.png" id="2_ur7pv"]
@@ -16,6 +16,8 @@
 [ext_resource type="Script" uid="uid://bijuiov17xg60" path="res://scripts/eyeball.gd" id="11_oprun"]
 [ext_resource type="AudioStream" uid="uid://ck1hfstss0447" path="res://freesound_community-pig-squeak-47166.mp3" id="12_oprun"]
 [ext_resource type="FontFile" uid="uid://ct6gm6qoct5tk" path="res://Xolonium-Regular.ttf" id="16_a8ls1"]
+[ext_resource type="Script" uid="uid://whe7jt62smdu" path="res://scripts/win_screen.gd" id="17_fulsm"]
+[ext_resource type="Texture2D" uid="uid://bgu4qxqdalkvp" path="res://sprites/ugly_pig.png" id="17_qfm1y"]
 
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "Pig Idle"
@@ -293,6 +295,9 @@ size = Vector2(131, 128)
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 86.023254
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fulsm"]
+bg_color = Color(1, 1, 1, 1)
+
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_onrkg")
@@ -421,5 +426,58 @@ offset_bottom = 46.0
 theme_override_fonts/normal_font = ExtResource("16_a8ls1")
 theme_override_font_sizes/normal_font_size = 40
 text = ":"
+
+[node name="winScreen" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_fulsm")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/winScreen"]
+modulate = Color(0.7490196, 0.31764707, 0.2901961, 1)
+layout_mode = 0
+offset_left = 960.0
+offset_top = 105.0
+offset_right = 1059.0
+offset_bottom = 454.0
+theme_override_colors/font_color = Color(0.8784321, 0.41170436, 0, 1)
+theme_override_styles/fill = SubResource("StyleBoxFlat_fulsm")
+fill_mode = 3
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/winScreen"]
+layout_mode = 0
+offset_right = 1144.0
+offset_bottom = 646.0
+texture = ExtResource("17_qfm1y")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer/winScreen"]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 125.0
+offset_right = 958.0
+offset_bottom = 165.0
+
+[node name="weight" type="RichTextLabel" parent="CanvasLayer/winScreen/Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 89.0
+offset_bottom = 70.0
+theme_override_fonts/normal_font = ExtResource("16_a8ls1")
+theme_override_font_sizes/normal_font_size = 30
+text = "300"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/winScreen/Panel"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 3.0
+offset_right = 133.0
+offset_bottom = 70.0
+theme_override_fonts/normal_font = ExtResource("16_a8ls1")
+theme_override_font_sizes/normal_font_size = 30
+text = "Lbs"
 
 [connection signal="area_entered" from="eatBox" to="." method="_on_eat_box_area_entered"]
