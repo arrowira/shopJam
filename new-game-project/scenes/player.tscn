@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ckudr8chj1kgo"]
+[gd_scene load_steps=28 format=3 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://b2vswt3i7gmvi" path="res://sprites/white-circle-hi.png" id="2_ur7pv"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://whe7jt62smdu" path="res://scripts/win_screen.gd" id="17_fulsm"]
 [ext_resource type="Texture2D" uid="uid://bgu4qxqdalkvp" path="res://sprites/ugly_pig.png" id="17_qfm1y"]
 [ext_resource type="AudioStream" uid="uid://8f55x3ag8ioj" path="res://pigsteps.mp3" id="19_4r5pv"]
+[ext_resource type="AudioStream" uid="uid://b1jdevb6rk672" path="res://freesound_community-tada-fanfare-a-6313.mp3" id="19_60mlk"]
 
 [sub_resource type="Animation" id="Animation_ur7pv"]
 resource_name = "Pig Idle"
@@ -478,6 +479,9 @@ offset_bottom = 70.0
 theme_override_fonts/normal_font = ExtResource("16_a8ls1")
 theme_override_font_sizes/normal_font_size = 30
 text = "Lbs"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/winScreen"]
+stream = ExtResource("19_60mlk")
 
 [node name="foot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_4r5pv")
