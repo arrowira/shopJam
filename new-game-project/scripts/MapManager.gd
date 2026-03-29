@@ -1,9 +1,9 @@
 extends Node2D
 
 var RoadObj = preload("res://scenes/RoadObject.tscn")
-var SmallShopScene = preload("res://scenes/shop.tscn")
-var MeduimShopScene = preload("res://scenes/shop.tscn")
-var LargeShopScene = preload("res://scenes/shop.tscn")
+var SmallShopScene = preload("res://scenes/medShop.tscn")
+var MeduimShopScene = preload("res://scenes/medShop.tscn")
+var LargeShopScene = preload("res://scenes/medShop.tscn")
 
 var MapSizeX = 32
 var MapSizeY = 32

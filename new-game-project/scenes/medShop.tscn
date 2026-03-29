@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://lnwbof5s0xcp"]
+[gd_scene load_steps=12 format=3 uid="uid://lnwbof5s0xcp"]
 
 [ext_resource type="Script" uid="uid://ctn4skimp326w" path="res://scripts/shop.gd" id="1_bd745"]
 [ext_resource type="Texture2D" uid="uid://cgo8f6uatovpx" path="res://sprites/medShop-1.png.png" id="2_eoffu"]
@@ -59,6 +59,15 @@ _data = {
 &"shopOut": SubResource("Animation_2fc2m")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eoffu"]
+size = Vector2(26, 477.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t00tp"]
+size = Vector2(924, 26.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vn8n"]
+size = Vector2(356, 26)
+
 [node name="medShop" type="Node2D"]
 script = ExtResource("1_bd745")
 
@@ -87,6 +96,28 @@ shape = SubResource("RectangleShape2D_xfvoa")
 libraries = {
 &"": SubResource("AnimationLibrary_8r1wq")
 }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(30, 339)
+shape = SubResource("RectangleShape2D_eoffu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(935, 338.25)
+shape = SubResource("RectangleShape2D_eoffu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(483, 108.9375)
+shape = SubResource("RectangleShape2D_t00tp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(210, 566)
+shape = SubResource("RectangleShape2D_8vn8n")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(759, 566)
+shape = SubResource("RectangleShape2D_8vn8n")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
